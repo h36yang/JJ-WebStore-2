@@ -1,0 +1,57 @@
+.full-extend() {
+    width: 100%;
+    height: 100%;
+}
+
+.center-text-vertical() {
+    position: relative;
+    top: 40%;
+}
+
+.gradient-background(@color) {
+    background-color: @color;
+    background-image: -webkit-linear-gradient(to right, @color, @gradient-color);
+    background-image: -o-linear-gradient(to right, @color, @gradient-color);
+    background-image: -moz-linear-gradient(to right, @color, @gradient-color);
+    background-image: linear-gradient(to right, @color, @gradient-color);
+}
+
+.background-image(@url, @size: cover, @position: center) {
+    background-image: url("@{url}");
+    background-size: @size;
+    background-position: @position;
+    display: block;
+}
+
+.padding-top-bottom(@size) {
+    padding-top: @size;
+    padding-bottom: @size;
+}
+
+.height(@size) {
+    height: @size;
+    min-height: @size;
+    max-height: @size;
+}
+
+.width(@size) {
+    width: @size;
+    min-width: @size;
+    max-width: @size;
+}
+
+.transition(@property: all,
+@duration: 1s,
+@timing: ease,
+@delay: 0s) {
+    -o-transition: @property @duration @timing @delay;
+    -moz-transition: @property @duration @timing @delay;
+    -webkit-transition: @property @duration @timing @delay;
+    transition: @property @duration @timing @delay;
+}
+
+.opacity(@value) {
+    @percentage: @value * 100;
+    filter: alpha(opacity=@percentage);
+    opacity: @value;
+}
