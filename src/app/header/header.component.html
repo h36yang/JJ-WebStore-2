@@ -1,27 +1,14 @@
-<header class="container-fluid">
-  <section class="d-none d-sm-block row">
-    <!-- Header Toolbar for Desktop -->
-    <span class="col-2">{{ title }}&nbsp;</span>
-    <span class="col-1">
-      <em>{{ engTitle }}</em>
-    </span>
-    <img class="col-9 logo" src="{{ logoUrl }}" alt="China Tea Logo" />
-  </section>
-
-  <section class="d-block d-sm-none row">
-    <!-- Header Toolbar for Mobile -->
-    <img class="col logo" src="{{ logoUrl }}" alt="China Tea Logo" />
-    <div class="w-100"></div>
-    <h1 class="col">{{ title }}</h1>
-  </section>
-
+<header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#top">
+      <img class="navbar-logo" [src]="logoUrl" />
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-toggleable-xs" id="navbarNav">
-      <ul class="navbar-nav">
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="#!/products">
             <span>我们的产品&nbsp;</span>

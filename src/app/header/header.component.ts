@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  title = '韵逸轩·中茶汇北美总代理';
-  engTitle = 'China Tea';
-  email = 'sales@zctea.ca';
-  logoUrl = 'img/logo.png';
+export class HeaderComponent implements OnInit {
+  title: string;
+  engTitle: string;
+  logoUrl: string;
+  isNavbarCollapsed: boolean;
+
+  ngOnInit(): void {
+    this.title = '韵逸轩·中茶汇北美总代理';
+    this.engTitle = 'China Tea';
+    this.logoUrl = 'assets/img/logo.png';
+    this.isNavbarCollapsed = true;
+  }
 }
