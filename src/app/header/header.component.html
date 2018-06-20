@@ -1,48 +1,45 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#top">
-      <img class="navbar-logo" [src]="logoUrl" />
-    </a>
-    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarNav">
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#!/products">
-            <span>我们的产品&nbsp;</span>
-            <span>
-              <em>Our Products</em>
-            </span>
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/aboutPuErh">
-            <span>关于普洱茶&nbsp;</span>
-            <span>
-              <em>About Pu-Erh Tea</em>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/aboutUs">
-            <span>关于我们&nbsp;</span>
-            <span>
-              <em>About Us</em>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!/contactUs">
-            <span>联系我们&nbsp;</span>
-            <span>
-              <em>Contact Us</em>
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#top">
+    <img class="navbar-logo" [src]="logoUrl" />
+  </a>
+  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#!/products">
+          <span>我们的产品&nbsp;</span>
+          <span>
+            <em>Our Products</em>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/aboutPuErh">
+          <span>关于普洱茶&nbsp;</span>
+          <span>
+            <em>About Pu-Erh Tea</em>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/aboutUs">
+          <span>关于我们&nbsp;</span>
+          <span>
+            <em>About Us</em>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/contactUs">
+          <span>联系我们&nbsp;</span>
+          <span>
+            <em>Contact Us</em>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
