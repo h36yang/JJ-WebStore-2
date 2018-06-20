@@ -1,0 +1,13 @@
+.card {
+    margin-bottom: 20px;
+}
+
+.card-avatar {
+    height: 500px;
+}
+
+.card-img-top {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}

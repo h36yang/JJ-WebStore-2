@@ -10,6 +10,7 @@ import { AboutPuErhComponent } from './about-pu-erh/about-pu-erh.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
