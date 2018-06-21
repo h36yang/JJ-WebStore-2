@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Product } from './product-list/product';
-import { FEATURED_PRODUCTS, HOT_PRODUCTS } from './product-list/product-data';
+import { Product, ProductFunction } from './product-list/product';
+import { FEATURED_PRODUCTS, HOT_PRODUCTS, PUERH_FUNCTIONS } from './product-list/product-data';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +14,9 @@ export class DataService {
 
   getHotProducts(): Product[] {
     return HOT_PRODUCTS;
+  }
+
+  getPuErhFunctions(): ProductFunction[] {
+    return PUERH_FUNCTIONS;
   }
 }

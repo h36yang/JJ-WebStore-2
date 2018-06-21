@@ -1,3 +1,40 @@
-<p>
-  about-pu-erh works!
-</p>
+<div class="container-fluid">
+  <div class="card">
+    <h4 class="card-header text-center">关于普洱茶 About Pu-Erh Tea</h4>
+    <div class="card-body">
+      <div class="row">
+        <section class="card col-12">
+          <img class="card-img-top" src="assets/img/tea/1.jpg" alt="普洱茶的由来">
+          <div class="card-body">
+            <h2 class="card-title">普洱茶的由来</h2>
+            <article class="card-text">
+              <p>普洱茶是以中国云南省一定区域内云南大叶种晒青毛茶为原料, 经过发酵加工成的散茶和紧压茶。其中包括历史上经自然发酵而成的普洱茶(存放也是一种加工方式), 也包括现今人工发酵和自然发酵的普洱茶。</p>
+              <p>据考证银生城的茶是云南大叶茶种, 也就是普洱茶种。所以银生城产的茶叶, 应该是普洱茶的祖宗。所以 , 清朝阮福在《普洱茶记》中说: "普洱古属银生府。则西蕃之用普洱, 已自唐时。" 宋朝 李石在他的《续博物志》一书也记载了:
+                "茶出银生诸山, 采无时, 杂菽姜烹而饮之。"</p>
+              <p>元朝有一地名叫"步日部", 由于后来写成汉字, 就成了"普耳"(当时"耳"无三点水)。普洱一词首见于此, 从此得以正名写入历史。没有固定名称的云南茶叶, 也被叫做"普茶"逐渐成为西藏、新疆等地区市场买卖的必需商品。普茶一词也从此名震国内外,
+                直到明朝末年, 才改叫普洱茶。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card col-12">
+          <img class="card-img-top" src="assets/img/tea/2.jpg" alt="普洱价值功效">
+          <div class="card-body">
+            <h2 class="card-title">普洱价值功效</h2>
+            <article class="card-text">
+              <p>普洱茶具有降低血脂、减肥、抑菌助消化、暖胃、生津、止渴、醒酒解毒等多种功效。可清胃生津、消食化痰、解酒解毒、利尿散寒, 止咳化痰、降低血脂胆固醇。以下几点是普洱的具体功效: </p>
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let item of puErhFunctions">
+                  <div>
+                    <strong>{{ item.summary }}</strong>
+                  </div>
+                  <div>{{ item.detail }}</div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
