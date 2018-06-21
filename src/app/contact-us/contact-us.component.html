@@ -1,3 +1,31 @@
-<p>
-  contact-us works!
-</p>
+<div class="container-fluid">
+  <div class="card text-center">
+    <h4 class="card-header">联系我们 Contact Us</h4>
+    <div class="card-body">
+      <div class="row">
+        <section class="col-md-6 col-12" *ngFor="let item of contacts">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <div>
+                <a class="card-link" href="tel:{{ item.phone }}">{{ item.phone }}</a>
+              </div>
+              <div>
+                <a class="card-link" href="mailto:{{ item.email }}">{{ item.email }}</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-12">
+          <div class="jumbotron">
+            <h5>更多产品请关注微店: 韵逸轩茶业</h5>
+            <p>微店链接:
+              <a [href]="wdLink">{{ wdLink }}</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
