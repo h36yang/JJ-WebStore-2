@@ -11,11 +11,22 @@ export class HeaderComponent implements OnInit {
   engTitle: string;
   logoUrl: string;
   isNavbarCollapsed: boolean;
+  isNavbarShrinked: boolean;
 
   ngOnInit(): void {
     this.title = '韵逸轩·中茶汇北美总代理';
     this.engTitle = 'China Tea';
     this.logoUrl = 'assets/img/logo.png';
     this.isNavbarCollapsed = true;
+    this.isNavbarShrinked = false;
+  }
+
+  onPageScroll() {
+    let y: number = window.scrollY || window.pageYOffset;
+    if (y >= 250) {
+      this.isNavbarShrinked = true;
+    } else {
+      this.isNavbarShrinked = false;
+    }
   }
 }

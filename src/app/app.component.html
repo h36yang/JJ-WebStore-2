@@ -2,20 +2,46 @@
   <app-header></app-header>
 </header>
 
-<section>
-  <app-product-list></app-product-list>
-</section>
+<div class="container-fluid">
+  <section class="row">
+    <div class="fill-screen bg-img-1 text-center text-justify" [ngStyle]="customStyle" (window:resize)="adjustHeight()">
+      <div class="welcome-title pl-3 pr-3">
+        <h1 class="display-4">从来佳茗似佳人</h1>
+      </div>
 
-<section>
-  <app-about-pu-erh></app-about-pu-erh>
-</section>
+      <div class="down-button">
+        <a class="btn">
+          <i class="fas fa-arrow-circle-down fa-4x"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <app-about-us></app-about-us>
-</section>
+  <section class="row content-filler">
+    <app-product-list></app-product-list>
+  </section>
 
-<section>
-  <app-contact-us></app-contact-us>
-</section>
+  <section class="row">
+    <div class="fill-screen fixed-attachment bg-img-2" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
+  </section>
 
-<router-outlet></router-outlet>
+  <section class="row content-filler">
+    <app-about-pu-erh></app-about-pu-erh>
+  </section>
+
+  <section class="row">
+    <div class="fill-screen fixed-attachment bg-img-2" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
+  </section>
+
+  <section class="row content-filler">
+    <app-about-us></app-about-us>
+  </section>
+
+  <section class="row">
+    <div class="fill-screen fixed-attachment bg-img-2" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
+  </section>
+
+  <section class="row content-filler">
+    <app-contact-us></app-contact-us>
+  </section>
+</div>

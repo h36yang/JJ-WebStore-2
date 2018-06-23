@@ -1,0 +1,30 @@
+.welcome-title {
+    position: relative;
+    top: 45%;
+    font-family: Roboto, "Helvetica Neue", KaiTi, "楷体", sans-serif;
+    color: white;
+}
+
+.down-button {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 40px;
+    color: white;
+}
+
+.bg-img-1 {
+    background-image: url("../assets/img/background_1.jpg");
+}
+
+.bg-img-2 {
+    background-image: url("../assets/img/background_2.jpg");
+}
+
+.bg-img-3 {
+    background-image: url("../assets/img/tea/4.jpg");
+}
+
+.bg-img-4 {
+    background-image: url("../assets/img/background_2.jpg");
+}

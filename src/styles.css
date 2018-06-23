@@ -1,8 +1,21 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-body {
-    padding-top: 90px;
-}
+@import "~bootstrap-css-only/css/bootstrap.min.css";
 
 .card {
     margin-bottom: 20px;
+}
+
+.fill-screen {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.fixed-attachment {
+    background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+    .fixed-attachment {
+        background-attachment: scroll;
+    }
 }

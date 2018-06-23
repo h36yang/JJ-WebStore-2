@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" [ngClass]="{ 'navbar-shrink': isNavbarShrinked }" (window:scroll)="onPageScroll($event)">
   <a class="navbar-brand" href="#top">
     <img class="navbar-logo" [src]="logoUrl" />
   </a>
@@ -10,7 +10,7 @@
     <ul class="nav navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#!/products">
-          <span>我们的产品&nbsp;</span>
+          <span>产品&nbsp;</span>
           <span>
             <em>Our Products</em>
           </span>
@@ -20,7 +20,7 @@
         <a class="nav-link" href="#!/aboutPuErh">
           <span>关于普洱茶&nbsp;</span>
           <span>
-            <em>About Pu-Erh Tea</em>
+            <em>About Pu-Erh</em>
           </span>
         </a>
       </li>
