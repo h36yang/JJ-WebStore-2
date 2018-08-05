@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   parallaxConfig: ParallaxConfig;
 
   constructor() {
+    // Set ngx-page-scroll default configurations
     PageScrollConfig.defaultScrollOffset = 80;
     PageScrollConfig.defaultEasingLogic = {
       ease: (t: number, b: number, c: number, d: number): number => {
