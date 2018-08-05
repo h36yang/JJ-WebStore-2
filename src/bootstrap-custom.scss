@@ -1,3 +1,5 @@
-$primary: darken(#660000, 5%);
+$custom-base-color: #660000;
+$primary: darken($custom-base-color, 5%);
+$dark: $custom-base-color;
 
 @import "~bootstrap/scss/bootstrap.scss";

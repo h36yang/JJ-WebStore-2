@@ -6,7 +6,7 @@
         <div class="col-lg-6 col-12" *ngFor="let featured of featuredProducts">
           <div class="jumbotron">
             <figure class="product-avatar">
-              <img [src]="featured.avatar" [alt]="featured.name">
+              <img class="img-thumbnail shadow-lg rounded" [src]="featured.avatar" [alt]="featured.name">
             </figure>
             <hr class="my-3" />
             <h5>{{ featured.name }}</h5>
@@ -25,7 +25,7 @@
         <div class="col-lg-6 col-12" *ngFor="let hot of hotProducts">
           <div class="jumbotron">
             <figure class="product-avatar">
-              <img [src]="hot.avatar" [alt]="hot.name">
+              <img class="img-thumbnail shadow-lg rounded" [src]="hot.avatar" [alt]="hot.name">
             </figure>
             <hr class="my-3" />
             <h5>{{ hot.name }}</h5>

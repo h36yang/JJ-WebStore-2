@@ -7,7 +7,7 @@ export const FEATURED_PRODUCTS: Product[] = [
         longName: "中茶牌云南七子饼茶 - 布朗紫印 普洱茶 (熟茶)",
         productNum: "YTPA12BC0046",
         ingredient: "云南大叶种晒青茶叶",
-        avatar: "assets/img/bulangziyin/1.jpg",
+        avatar: "assets/img/bulangziyin/avatar.jpg",
         images: [
             "assets/img/bulangziyin/1.jpg",
             "assets/img/bulangziyin/2.jpg"
@@ -56,7 +56,7 @@ export const FEATURED_PRODUCTS: Product[] = [
         longName: "困鹿山 - 极品古树春尖 纯手工普洱茶 (生茶)",
         productNum: null,
         ingredient: "极品古树春尖",
-        avatar: "assets/img/kunlushan/1.jpg",
+        avatar: "assets/img/kunlushan/avatar.jpg",
         images: [
             "assets/img/kunlushan/1.jpg"
         ],
@@ -99,7 +99,7 @@ export const HOT_PRODUCTS: Product[] = [
         longName: "中茶牌普洱茶 - 7581臻品袋泡 (熟茶)",
         productNum: "YTPA12DP009",
         ingredient: "云南大叶种晒青茶叶",
-        avatar: "assets/img/7581_1/1.jpg",
+        avatar: "assets/img/7581_1/avatar.jpg",
         images: [
             "assets/img/7581_1/1.jpg",
             "assets/img/7581_1/2.jpg"
@@ -148,7 +148,7 @@ export const HOT_PRODUCTS: Product[] = [
         longName: "中茶牌普洱茶 - 金元贡饼 普洱茶 (熟茶)",
         productNum: "YTPA12TC0016",
         ingredient: "云南大叶种晒青茶叶",
-        avatar: "assets/img/jinyuangongbing/1.jpg",
+        avatar: "assets/img/jinyuangongbing/avatar.jpg",
         images: [
             "assets/img/jinyuangongbing/1.jpg",
             "assets/img/jinyuangongbing/2.jpg"
@@ -189,7 +189,7 @@ export const HOT_PRODUCTS: Product[] = [
         longName: "巧白金 - 巧克力状白茶",
         productNum: "5701",
         ingredient: "白茶",
-        avatar: "assets/img/qiaobaijin/1.jpg",
+        avatar: "assets/img/qiaobaijin/avatar.jpg",
         images: [
             "assets/img/qiaobaijin/1.jpg",
             "assets/img/qiaobaijin/2.jpg",
@@ -236,7 +236,7 @@ export const HOT_PRODUCTS: Product[] = [
         longName: "宝莉花茶 (茉莉花六堡茶)",
         productNum: null,
         ingredient: "六堡茶 茉莉花",
-        avatar: "assets/img/baolihuacha/1.jpg",
+        avatar: "assets/img/baolihuacha/avatar.jpg",
         images: [
             "assets/img/baolihuacha/1.jpg",
             "assets/img/baolihuacha/2.jpg",

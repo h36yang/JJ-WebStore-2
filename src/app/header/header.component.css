@@ -5,7 +5,6 @@
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-    background-color: #660000;
     background-image: -webkit-linear-gradient(to right top, silver 5%, #660000);
     background-image: -o-linear-gradient(to right top, #fafafa 5%, #660000);
     background-image: -moz-linear-gradient(to right top, #fafafa 5%, #660000);
