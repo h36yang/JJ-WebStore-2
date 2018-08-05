@@ -1,8 +1,8 @@
-.card-avatar {
+.product-avatar {
     height: 500px;
 }
 
-.card-img-top {
+.product-avatar img {
     height: 100%;
     width: auto;
     max-width: 100%;

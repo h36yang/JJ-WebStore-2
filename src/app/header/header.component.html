@@ -1,15 +1,25 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" [ngClass]="{ 'navbar-shrink': isNavbarShrinked }" (window:scroll)="onPageScroll($event)">
-  <a class="navbar-brand" href="#top">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" [ngClass]="{ 'navbar-shrink': isNavbarShrinked }" (window:scroll)="onPageScroll($event)">
+  <a pageScroll class="navbar-brand" href="#top">
     <img class="navbar-logo" [src]="logoUrl" />
   </a>
+
   <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false"
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#!/products">
+    <ul snScrollSpy id="nav-list" class="nav navbar-nav nav-pills">
+        <li class="nav-item">
+            <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#top">
+              <span>主页&nbsp;</span>
+              <span>
+                <em>Home</em>
+              </span>
+            </a>
+          </li>
+      <li class="nav-item">
+        <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#products">
           <span>产品&nbsp;</span>
           <span>
             <em>Our Products</em>
@@ -17,7 +27,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#!/aboutPuErh">
+        <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#aboutPuErh">
           <span>关于普洱茶&nbsp;</span>
           <span>
             <em>About Pu-Erh</em>
@@ -25,7 +35,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#!/aboutUs">
+        <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#aboutUs">
           <span>关于我们&nbsp;</span>
           <span>
             <em>About Us</em>
@@ -33,7 +43,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#!/contactUs">
+        <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#contactUs">
           <span>联系我们&nbsp;</span>
           <span>
             <em>Contact Us</em>

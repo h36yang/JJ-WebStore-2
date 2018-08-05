@@ -3,45 +3,45 @@
 </header>
 
 <div class="container-fluid">
-  <section class="row">
-    <div class="fill-screen bg-img-1 text-center text-justify" [ngStyle]="customStyle" (window:resize)="adjustHeight()">
+  <sn-scroll-spy-section id="top" class="row" for="nav-list">
+    <div parallax [config]="parallaxConfig" class="fill-screen bg-img-1 text-center text-justify" [ngStyle]="customStyle" (window:resize)="adjustHeight()">
       <div class="welcome-title pl-3 pr-3">
         <h1 class="display-4">从来佳茗似佳人</h1>
       </div>
 
       <div class="down-button">
-        <a class="btn">
-          <i class="fas fa-arrow-circle-down fa-4x"></i>
+        <a pageScroll class="btn" href="#products">
+          <fa-icon [icon]="faArrowCircleDown" size="4x"></fa-icon>
         </a>
       </div>
     </div>
-  </section>
+  </sn-scroll-spy-section>
 
-  <section class="row content-filler">
+  <sn-scroll-spy-section id="products" class="row content-filler" for="nav-list">
     <app-product-list></app-product-list>
-  </section>
+  </sn-scroll-spy-section>
 
   <section class="row">
     <div class="fill-screen fixed-attachment bg-img-2" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
   </section>
 
-  <section class="row content-filler">
+  <sn-scroll-spy-section id="aboutPuErh" class="row content-filler" for="nav-list">
     <app-about-pu-erh></app-about-pu-erh>
-  </section>
+  </sn-scroll-spy-section>
 
   <section class="row">
-    <div class="fill-screen fixed-attachment bg-img-2" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
+    <div class="fill-screen fixed-attachment bg-img-3" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
   </section>
 
-  <section class="row content-filler">
+  <sn-scroll-spy-section id="aboutUs" class="row content-filler" for="nav-list">
     <app-about-us></app-about-us>
-  </section>
+  </sn-scroll-spy-section>
 
   <section class="row">
-    <div class="fill-screen fixed-attachment bg-img-2" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
+    <div class="fill-screen fixed-attachment bg-img-4" [ngStyle]="customStyle" (window:resize)="adjustHeight()"></div>
   </section>
 
-  <section class="row content-filler">
+  <sn-scroll-spy-section id="contactUs" class="row content-filler" for="nav-list">
     <app-contact-us></app-contact-us>
-  </section>
+  </sn-scroll-spy-section>
 </div>

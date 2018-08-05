@@ -4,15 +4,14 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-6 col-12" *ngFor="let featured of featuredProducts">
-          <div class="card">
-            <figure class="card-avatar">
-              <img class="card-img-top" [src]="featured.avatar" [alt]="featured.name">
+          <div class="jumbotron">
+            <figure class="product-avatar">
+              <img [src]="featured.avatar" [alt]="featured.name">
             </figure>
-            <div class="card-body">
-              <h5 class="card-title">{{ featured.name }}</h5>
-              <h6 class="card-subtitle">{{ featured.type }}</h6>
-              <p class="card-text">{{ featured.price | currency }}</p>
-            </div>
+            <hr class="my-3" />
+            <h5>{{ featured.name }}</h5>
+            <h6>{{ featured.type }}</h6>
+            <p>{{ featured.price | currency }}</p>
           </div>
         </div>
       </div>
@@ -24,15 +23,14 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-6 col-12" *ngFor="let hot of hotProducts">
-          <div class="card">
-            <figure class="card-avatar">
-              <img class="card-img-top" [src]="hot.avatar" [alt]="hot.name">
+          <div class="jumbotron">
+            <figure class="product-avatar">
+              <img [src]="hot.avatar" [alt]="hot.name">
             </figure>
-            <div class="card-body">
-              <h5 class="card-title">{{ hot.name }}</h5>
-              <h6 class="card-subtitle">{{ hot.type }}</h6>
-              <p class="card-text">{{ hot.price | currency }}</p>
-            </div>
+            <hr class="my-3" />
+            <h5>{{ hot.name }}</h5>
+            <h6>{{ hot.type }}</h6>
+            <p>{{ hot.price | currency }}</p>
           </div>
         </div>
       </div>
