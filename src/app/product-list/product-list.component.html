@@ -4,7 +4,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-6 col-12" *ngFor="let featured of featuredProducts">
-          <div class="jumbotron">
+          <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
             <figure class="product-avatar">
               <img class="img-thumbnail shadow-lg rounded" [src]="featured.avatar" [alt]="featured.name">
             </figure>
@@ -23,7 +23,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-6 col-12" *ngFor="let hot of hotProducts">
-          <div class="jumbotron">
+          <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
             <figure class="product-avatar">
               <img class="img-thumbnail shadow-lg rounded" [src]="hot.avatar" [alt]="hot.name">
             </figure>

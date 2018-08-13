@@ -1,15 +1,23 @@
+// Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Provider } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
 
+// Third Party Modules
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { ParallaxModule } from 'ngx-parallax';
 import { InViewportModule, WindowRef } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
+// Custom Modules
+import { AppRoutingModule } from './app-routing.module';
+
+// Custom Services
 import { DataService } from './data.service';
+
+// Custom Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutPuErhComponent } from './about-pu-erh/about-pu-erh.component';
@@ -37,6 +45,7 @@ export const inViewportProviders: Provider[] = [{
     InViewportModule.forRoot(inViewportProviders),
     ScrollSpyModule.forRoot(),
     NgbModule.forRoot(),
+    AnimateOnScrollModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,

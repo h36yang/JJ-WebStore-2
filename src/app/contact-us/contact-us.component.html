@@ -3,7 +3,7 @@
   <div class="card-body">
     <div class="row">
       <div class="col-md-6" *ngFor="let item of contacts">
-        <div class="jumbotron">
+        <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
           <h5>{{ item.name }}</h5>
           <div>
             <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
@@ -15,7 +15,7 @@
       </div>
 
       <div class="col">
-        <div class="jumbotron">
+        <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
           <h5>更多产品请关注微店: 韵逸轩茶业</h5>
           <p>微店链接:
             <a [href]="wdLink" target="_blank">{{ wdLink }}</a>
