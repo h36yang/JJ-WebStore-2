@@ -1,5 +1,17 @@
 .product-avatar {
-    height: 350px;
+    height: 400px;
+}
+
+@media (max-width: 720px) {
+    .product-avatar {
+        height: 300px;
+    }
+}
+
+@media (max-width: 540px) {
+    .product-avatar {
+        height: 200px;
+    }
 }
 
 .product-avatar img {
