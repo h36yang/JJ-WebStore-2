@@ -1,0 +1,37 @@
+.welcome-title {
+    position: relative;
+    top: 45%;
+    font-family: Roboto, "Helvetica Neue", KaiTi, "楷体", sans-serif;
+    color: white;
+}
+
+.down-button {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 40px;
+}
+
+.down-button fa-icon {
+    color: white;
+}
+
+.bg-img-1 {
+    background-image: url("../../assets/img/backgrounds/bg1_darker.jpg");
+}
+
+.bg-img-2 {
+    background-image: url("../../assets/img/backgrounds/bg2.jpg");
+}
+
+.bg-img-3 {
+    background-image: url("../../assets/img/backgrounds/bg3.jpg");
+}
+
+.bg-img-4 {
+    background-image: url("../../assets/img/backgrounds/bg4.jpg");
+}
+
+#products {
+    margin-top: 160px;
+}

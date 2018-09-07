@@ -19,6 +19,7 @@ import { DataService } from './data.service';
 
 // Custom Components
 import { AppComponent } from './app.component';
+import { MainPageComponent } from './main-page/main-page.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutPuErhComponent } from './about-pu-erh/about-pu-erh.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -35,6 +36,7 @@ export const inViewportProviders: Provider[] = [{
 @NgModule({
   declarations: [
     AppComponent,
+    MainPageComponent,
     HeaderComponent,
     AboutPuErhComponent,
     AboutUsComponent,
