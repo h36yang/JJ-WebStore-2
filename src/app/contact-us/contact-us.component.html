@@ -8,24 +8,22 @@
   </h4>
   <div class="card-body">
     <div class="row">
-      <div class="col-md-6" *ngFor="let item of contacts">
-        <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
-          <h5>{{ item.name }}</h5>
-          <div>
-            <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
-          </div>
-          <div>
-            <a href="mailto:{{ item.email }}">{{ item.email }}</a>
-          </div>
-        </div>
+      <div class="col-md-4" *ngFor="let item of contacts">
+        <app-contact-card [contact]="item"></app-contact-card>
       </div>
 
-      <div class="col">
-        <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
-          <h5>更多产品请关注微店: 韵逸轩茶业</h5>
-          <p>微店链接:
-            <a [href]="wdLink" target="_blank">{{ wdLink }}</a>
-          </p>
+      <div class="col-md-4">
+        <div animateOnScroll animationName="animated fadeInLeft" class="card hide-on-init">
+          <figure class="contact-avatar">
+            <img class="card-img-top" [src]="wdIcon" [alt]="wdName">
+          </figure>
+          <div class="card-body">
+            <h5 class="card-title">{{ wdName }}</h5>
+            <p class="card-text">
+              <fa-icon [icon]="faExternalLinkAlt"></fa-icon>&nbsp;
+              <a [href]="wdLink" target="_blank">{{ wdId }}</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

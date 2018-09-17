@@ -1,5 +1,12 @@
+// Custom Base Color
 $custom-base-color: #660000;
 $primary: darken($custom-base-color, 5%);
 $dark: $custom-base-color;
-
+// Custom Background Color
+$custom-bg-color: lighten(#d3d3d3, 5%);
+$list-group-bg: $custom-bg-color;
+$card-bg: $custom-bg-color;
+// Custom Font
+$font-size-base: 1.05rem;
+$font-weight-normal: 500 !default;
 @import "~bootstrap/scss/bootstrap.scss";

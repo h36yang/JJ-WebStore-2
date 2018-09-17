@@ -1,7 +1,16 @@
 @import '~animate.css/animate.min.css';
+body {
+    background-color: lightgray !important;
+}
 
 .card {
     margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
 }
 
 .fill-screen {
@@ -26,4 +35,9 @@
 
 .hide-on-init {
     visibility: hidden;
+}
+
+.contact-avatar {
+    margin-top: 1rem;
+    height: 100px;
 }

@@ -24,7 +24,10 @@ import { HeaderComponent } from './header/header.component';
 import { AboutPuErhComponent } from './about-pu-erh/about-pu-erh.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactCardComponent } from './contact-card/contact-card.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 // Provide window object for browser and a suitable replacement on other platforms
 export const getWindow = () => window;
@@ -41,7 +44,10 @@ export const inViewportProviders: Provider[] = [{
     AboutPuErhComponent,
     AboutUsComponent,
     ContactUsComponent,
-    ProductListComponent
+    ContactCardComponent,
+    ProductListComponent,
+    ProductCardComponent,
+    ProductDetailComponent
   ],
   imports: [
     InViewportModule.forRoot(inViewportProviders),

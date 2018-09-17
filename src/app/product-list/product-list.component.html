@@ -4,15 +4,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-6 col-12" *ngFor="let featured of featuredProducts">
-          <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
-            <figure class="product-avatar">
-              <img class="img-thumbnail shadow-lg rounded" [src]="featured.avatar" [alt]="featured.name">
-            </figure>
-            <hr class="my-3" />
-            <h5>{{ featured.name }}</h5>
-            <h6>{{ featured.type }}</h6>
-            <p>{{ featured.price | currency }}</p>
-          </div>
+          <app-product-card [product]="featured"></app-product-card>
         </div>
       </div>
     </div>
@@ -23,15 +15,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-6 col-12" *ngFor="let hot of hotProducts">
-          <div class="jumbotron hide-on-init" animateOnScroll animationName="animated fadeInLeft">
-            <figure class="product-avatar">
-              <img class="img-thumbnail shadow-lg rounded" [src]="hot.avatar" [alt]="hot.name">
-            </figure>
-            <hr class="my-3" />
-            <h5>{{ hot.name }}</h5>
-            <h6>{{ hot.type }}</h6>
-            <p>{{ hot.price | currency }}</p>
-          </div>
+          <app-product-card [product]="hot"></app-product-card>
         </div>
       </div>
     </div>

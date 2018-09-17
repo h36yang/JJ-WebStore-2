@@ -1,0 +1,20 @@
+.product-avatar {
+    margin-top: 1rem;
+    height: 400px;
+}
+
+@media (max-width: 720px) {
+    .product-avatar {
+        height: 300px;
+    }
+}
+
+@media (max-width: 540px) {
+    .product-avatar {
+        height: 200px;
+    }
+}
+
+.rounded {
+    border-radius: 35% !important;
+}

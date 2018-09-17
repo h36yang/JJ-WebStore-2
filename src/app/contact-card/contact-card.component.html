@@ -1,0 +1,12 @@
+<div animateOnScroll animationName="animated fadeInLeft" class="card hide-on-init">
+  <figure class="contact-avatar">
+    <img class="card-img-top" [src]="contact.avatar" [alt]="contact.name">
+  </figure>
+  <div class="card-body">
+    <h5 class="card-title">{{ contact.name }}</h5>
+    <p class="card-text">
+      <fa-icon [icon]="faPhoneSquare"></fa-icon>&nbsp;
+      <a href="tel:{{ contact.phone }}">{{ contact.phone }}</a>
+    </p>
+  </div>
+</div>
