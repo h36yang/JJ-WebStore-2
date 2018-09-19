@@ -52,8 +52,8 @@ export const inViewportProviders: Provider[] = [{
   imports: [
     InViewportModule.forRoot(inViewportProviders),
     ScrollSpyModule.forRoot(),
-    NgbModule.forRoot(),
     AnimateOnScrollModule.forRoot(),
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,

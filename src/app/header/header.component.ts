@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onPageScroll() {
-    let y: number = window.scrollY || window.pageYOffset;
+    const y: number = window.scrollY || window.pageYOffset;
     if (y >= 250) {
       this.isNavbarShrinked = true;
     } else {
