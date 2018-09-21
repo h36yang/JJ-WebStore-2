@@ -32,12 +32,18 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
     this.parallaxConfig = { ratio: 0.2 };
     this.faArrowCircleDown = faArrowCircleDown;
-    this.adjustHeight();
-  }
-
-  adjustHeight() {
+    // Initalize background image height to be window height
     this.customStyle = {
       'height': window.innerHeight + 'px'
     };
+  }
+
+  adjustHeight() {
+    // Only adjust background image height dynamically when viewport is smaller than 1024px
+    if (window.innerWidth > 1024) {
+      this.customStyle = {
+        'height': window.innerHeight + 'px'
+      };
+    }
   }
 }
