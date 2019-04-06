@@ -1,13 +1,14 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Provider } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 // Third Party Modules
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { ParallaxModule } from 'ngx-parallax';
-import { InViewportModule, WindowRef } from '@thisissoon/angular-inviewport';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
@@ -29,12 +30,19 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
-// Provide window object for browser and a suitable replacement on other platforms
-export const getWindow = () => window;
-export const inViewportProviders: Provider[] = [{
-  provide: WindowRef,
-  useFactory: (getWindow)
-}];
+/**
+ * Easing Logic for easeInOutExpo easing
+ * @param t current time
+ * @param b beginning value
+ * @param c change in value
+ * @param d duration
+ */
+export function easeInOutExpo(t: number, b: number, c: number, d: number): number {
+  if (t === 0) { return b; }
+  if (t === d) { return b + c; }
+  if ((t /= d / 2) < 1) { return c / 2 * Math.pow(2, 10 * (t - 1)) + b; }
+  return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+}
 
 @NgModule({
   declarations: [
@@ -50,14 +58,15 @@ export const inViewportProviders: Provider[] = [{
     ProductDetailComponent
   ],
   imports: [
-    InViewportModule.forRoot(inViewportProviders),
+    InViewportModule,
     ScrollSpyModule.forRoot(),
     AnimateOnScrollModule.forRoot(),
+    NgxPageScrollCoreModule.forRoot({ scrollOffset: 80, easingLogic: easeInOutExpo }),
+    NgxPageScrollModule,
     NgbModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxPageScrollModule,
     ParallaxModule
   ],
   providers: [DataService],
