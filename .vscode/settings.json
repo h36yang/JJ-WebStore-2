@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/968079ef-ecea-4381-940d-843a706c9d20/resourceGroups/webStoreResourceGroup/providers/Microsoft.Web/sites/zcTea",
+    "appService.deploySubpath": "dist"
+}
