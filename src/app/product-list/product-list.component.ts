@@ -16,7 +16,16 @@ export class ProductListComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.featuredProducts = this.dataService.getFeaturedProducts();
-    this.hotProducts = this.dataService.getHotProducts();
+    // Featured - Category ID = 1
+    this.dataService.getProductsByCategory(1)
+      .subscribe(
+        (data: Product[]) => this.featuredProducts = data
+      );
+
+    // Hot - Category ID = 2
+    this.dataService.getProductsByCategory(2)
+      .subscribe(
+        (data: Product[]) => this.hotProducts = data
+      );
   }
 }

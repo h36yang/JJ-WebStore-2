@@ -5,21 +5,16 @@ export const FEATURED_PRODUCTS: Product[] = [
         id: 'blzy',
         name: '云南七子饼茶 - 布朗紫印',
         longName: '中茶牌云南七子饼茶 - 布朗紫印 普洱茶 (熟茶)',
-        productNum: 'YTPA12BC0046',
+        productNumber: 'YTPA12BC0046',
         ingredient: '云南大叶种晒青茶叶',
-        avatar: 'assets/img/bulangziyin/avatar.jpg',
-        images: [
-            'assets/img/bulangziyin/1.jpg',
-            'assets/img/bulangziyin/2.jpg'
-        ],
         type: '普洱茶 (熟茶)',
         price: 399.99,
         volume: '357g (1饼)',
         origin: '中国 - 云南省 - 昆明市',
         producer: '云南中茶茶业有限公司',
         highlight: null,
-        desc: '这是一款纯料普洱熟茶, 饼型圆整大气, 饼面条索完整, 色泽红褐, 金毫显露。其原料来自单一产区, 单一茶树品种, 这在熟茶产品中并不多见, 旨在更好地体现出该茶区的茶叶特点, 带给您至臻至纯的饮茶感受。',
-        functions: [
+        description: '这是一款纯料普洱熟茶, 饼型圆整大气, 饼面条索完整, 色泽红褐, 金毫显露。其原料来自单一产区, 单一茶树品种, 这在熟茶产品中并不多见, 旨在更好地体现出该茶区的茶叶特点, 带给您至臻至纯的饮茶感受。',
+        productFunction: [
             {
                 summary: '安神',
                 detail: '普洱熟茶是可以在睡前喝的安神茶, 而且无论年龄大小都可以睡前饮用。'
@@ -54,21 +49,17 @@ export const FEATURED_PRODUCTS: Product[] = [
         id: 'kls',
         name: '困鹿山 - 极品古树春尖',
         longName: '困鹿山 - 极品古树春尖 纯手工普洱茶 (生茶)',
-        productNum: null,
+        productNumber: null,
         ingredient: '极品古树春尖',
-        avatar: 'assets/img/kunlushan/avatar.jpg',
-        images: [
-            'assets/img/kunlushan/1.jpg'
-        ],
         type: '普洱茶 (生茶)',
         price: 499.99,
         volume: '200g (1饼)',
         origin: '中国 - 云南省 - 普洱市',
         producer: '困鹿山古茶园私人订制',
         highlight: '口感滑, 回甘好, 香气浓郁',
-        desc: '困鹿山普洱茶香型独特, 在云南三大茶区中独有此茶能称得一个"雅"字。茶香清雅、高锐、持久, 韵长, 是"普洱茶"中的一秀, 历来是贡茶的首选。'
+        description: '困鹿山普洱茶香型独特, 在云南三大茶区中独有此茶能称得一个"雅"字。茶香清雅、高锐、持久, 韵长, 是"普洱茶"中的一秀, 历来是贡茶的首选。'
             + '新茶入口微苦化甘转甜, 口感香、甘、甜相混而生, 丰富沉厚, 喉韵甘润持久, 气蕴上扬而沉实, 无愧皇家茶园称号而问鼎普洱茶界。',
-        functions: [
+        productFunction: [
             {
                 summary: '降脂、提神、降压、减肥',
                 detail: '生普洱茶功效主要可以清理肠道, 有降脂、提神、降压和减肥功效。生茶的活性成份较多, 因此易失眠者、感冒发热者、胃溃疡患者、孕妇不宜饮用。'
@@ -101,22 +92,17 @@ export const HOT_PRODUCTS: Product[] = [
         id: '7581_zpdp',
         name: '7581臻品袋泡',
         longName: '中茶牌普洱茶 - 7581臻品袋泡 (熟茶)',
-        productNum: 'YTPA12DP009',
+        productNumber: 'YTPA12DP009',
         ingredient: '云南大叶种晒青茶叶',
-        avatar: 'assets/img/7581_1/avatar.jpg',
-        images: [
-            'assets/img/7581_1/1.jpg',
-            'assets/img/7581_1/2.jpg'
-        ],
         type: '普洱茶 (熟茶)',
         price: 255.99,
         volume: '300g (2g/袋 - 25袋/小盒 - 6小盒/中盒)',
         origin: '中国 - 云南省 - 昆明市',
         producer: '云南中茶茶业有限公司',
         highlight: '三年陈化, 陈醇甘润, 经典传承',
-        desc: '7581是普洱茶历史上第一款由人工渥堆发酵而成的普洱熟茶, 为云南中茶赢得了"熟茶发酵工艺首创者"的美誉。它不仅"主宰了整个80年代到90年代的熟砖系统", 而且到现在, 也是很多普洱茶茶友品茗的首选。'
+        description: '7581是普洱茶历史上第一款由人工渥堆发酵而成的普洱熟茶, 为云南中茶赢得了"熟茶发酵工艺首创者"的美誉。它不仅"主宰了整个80年代到90年代的熟砖系统", 而且到现在, 也是很多普洱茶茶友品茗的首选。'
             + '2015年云南中茶公司为适应市场需求, 臻选原料精心拼配首度研发7581袋泡熟茶, 该茶汤色红亮, 醇厚润糯, 经久耐泡, 香纯甘甜, 外观精美, 简洁方便。',
-        functions: [
+        productFunction: [
             {
                 summary: '安神',
                 detail: '普洱熟茶是可以在睡前喝的安神茶, 而且无论年龄大小都可以睡前饮用。'
@@ -151,22 +137,17 @@ export const HOT_PRODUCTS: Product[] = [
         id: 'jygb',
         name: '金元贡饼',
         longName: '中茶牌普洱茶 - 金元贡饼 普洱茶 (熟茶)',
-        productNum: 'YTPA12TC0016',
+        productNumber: 'YTPA12TC0016',
         ingredient: '云南大叶种晒青茶叶',
-        avatar: 'assets/img/jinyuangongbing/avatar.jpg',
-        images: [
-            'assets/img/jinyuangongbing/1.jpg',
-            'assets/img/jinyuangongbing/2.jpg'
-        ],
         type: '普洱茶 (熟茶)',
         price: 35.99,
         volume: '80g (8g × 10饼)',
         origin: '中国 - 云南省 - 昆明市',
         producer: '云南中茶茶业有限公司',
-        desc: '该茶臻选云南西双版纳勐海境内高海拔云南大叶种茶菁, 适度发酵, 采用创新工艺压制, 饼形圆润规整, 精致小巧, 饼面条索紧实, 红褐显毫。甜香显露, 汤色红浓, 滋味尚浓厚回味甜醇。'
+        description: '该茶臻选云南西双版纳勐海境内高海拔云南大叶种茶菁, 适度发酵, 采用创新工艺压制, 饼形圆润规整, 精致小巧, 饼面条索紧实, 红褐显毫。甜香显露, 汤色红浓, 滋味尚浓厚回味甜醇。'
             + '每饼8克的小饼采用独立包装, 品饮便捷, 10小饼每盒的纸盒包装精致环保, 高端雅致。是您商务、休闲、旅行、工作的尚佳伴侣, 与您共享美好时光。',
         highlight: '甘甜醇润, 精致小巧, 高端雅致, 轻便简约',
-        functions: [
+        productFunction: [
             {
                 summary: '降脂、减肥降压、抗动脉硬化',
                 detail: '长期饮用普洱茶能使胆固醇及甘油脂减少, 所以长期饮用普洱茶有治疗肥胖症的功用。饮用普洱茶能引起人的血管舒张、血压下降、心率减慢和脑部血流量减少等生理效应, 对高血压和脑动脉硬化患者有良好的治疗作用。'
@@ -193,22 +174,16 @@ export const HOT_PRODUCTS: Product[] = [
         id: 'qbj',
         name: '巧白金',
         longName: '巧白金 - 巧克力状白茶',
-        productNum: '5701',
+        productNumber: '5701',
         ingredient: '白茶',
-        avatar: 'assets/img/qiaobaijin/avatar.jpg',
-        images: [
-            'assets/img/qiaobaijin/1.jpg',
-            'assets/img/qiaobaijin/2.jpg',
-            'assets/img/qiaobaijin/3.jpg'
-        ],
         type: '巧克力状白茶',
         price: 29.99,
         volume: '180g (60g × 3)',
         origin: '中国 - 福建省 - 福州市',
         producer: '福建茶叶进出口有限责任公司',
-        desc: '精选自白茶原产地福鼎、政和1000多米高山地区的福鼎大毫、政和大白优质一芽一叶、一芽二叶原料, 秉承传统白茶制作工艺, 结合公司后加工及独到拼配技术, 经资深茶师精心调配而成。香气清鲜显毫香, 滋味醇厚清爽, 汤色浅黄明亮, 实为白茶之典范。',
+        description: '精选自白茶原产地福鼎、政和1000多米高山地区的福鼎大毫、政和大白优质一芽一叶、一芽二叶原料, 秉承传统白茶制作工艺, 结合公司后加工及独到拼配技术, 经资深茶师精心调配而成。香气清鲜显毫香, 滋味醇厚清爽, 汤色浅黄明亮, 实为白茶之典范。',
         highlight: '新颖巧克力状, 简约方便。驱寒退热, 保肝明目。',
-        functions: [
+        productFunction: [
             {
                 summary: '驱寒滋养',
                 detail: '在冬天, 尤其是当下气候处于低湿状态, 人体长期处于这样的环境当中, 难免会遭受湿寒入侵体内。温和的老白茶是极佳的御寒、驱寒的饮品。'
@@ -244,26 +219,18 @@ export const HOT_PRODUCTS: Product[] = [
         id: 'blhc',
         name: '宝莉花茶',
         longName: '宝莉花茶 (茉莉花六堡茶)',
-        productNum: null,
+        productNumber: null,
         ingredient: '六堡茶 茉莉花',
-        avatar: 'assets/img/baolihuacha/avatar.jpg',
-        images: [
-            'assets/img/baolihuacha/1.jpg',
-            'assets/img/baolihuacha/2.jpg',
-            'assets/img/baolihuacha/3.jpg',
-            'assets/img/baolihuacha/4.jpg',
-            'assets/img/baolihuacha/5.jpg'
-        ],
         type: '茉莉花六堡茶',
         price: 45.99,
         volume: '120g (5g × 24袋)',
         origin: '中国 - 广西梧州市',
         producer: '梧州中茶茶业有限公司',
-        desc: '宝莉花茶是精选陈年六堡茶, 和新鲜的茉莉鲜花, 采用科学的窨制工艺加工而成, 兼具六堡茶"红浓陈醇"和茉莉花香特点。'
+        description: '宝莉花茶是精选陈年六堡茶, 和新鲜的茉莉鲜花, 采用科学的窨制工艺加工而成, 兼具六堡茶"红浓陈醇"和茉莉花香特点。'
             + '该茶外形紧结显毫, 香气浓郁鲜灵, 茶汤晶莹剔透似琥珀色, 口感醇滑, 齿颊留香, 叶底匀嫩红亮, 经久耐泡。'
             + '适合不宜饮用绿茶、清香铁观音、普洱生茶之类人群, 是常坐在电脑前白领阶层人士首选饮品, 特别适合爱美的女士们饮用。',
         highlight: '茶性温和, 帮助消化, 健胃养神, 美容养颜',
-        functions: [
+        productFunction: [
             {
                 summary: '膳食营养',
                 detail: '黑茶中含有较丰富的营养成份, 最主要的是维生素和矿物质, 另外还有蛋白质、氨基酸、糖类物质等。'

@@ -1,6 +1,7 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 // Third Party Modules
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -54,6 +55,7 @@ import { EASE_IN_OUT_EXPO } from './easing-logic';
     NgxPageScrollModule,
     NgbModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
     ParallaxModule

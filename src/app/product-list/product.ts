@@ -3,18 +3,18 @@ export class Product {
     id: string;
     name: string;
     longName: string;
-    productNum: string;
+    productNumber: string;
     ingredient: string;
-    avatar: string;
-    images: string[];
+    avatarImageId?: number;
+    productImageIds?: number[];
     type: string;
     price: number;
     volume: string;
     origin: string;
     producer: string;
     highlight: string;
-    desc: string;
-    functions: ProductFunction[];
+    description: string;
+    productFunction: ProductFunction[];
 }
 
 export class ProductFunction {
