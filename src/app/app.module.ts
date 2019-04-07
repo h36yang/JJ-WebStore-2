@@ -30,19 +30,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
-/**
- * Easing Logic for easeInOutExpo easing
- * @param t current time
- * @param b beginning value
- * @param c change in value
- * @param d duration
- */
-export function easeInOutExpo(t: number, b: number, c: number, d: number): number {
-  if (t === 0) { return b; }
-  if (t === d) { return b + c; }
-  if ((t /= d / 2) < 1) { return c / 2 * Math.pow(2, 10 * (t - 1)) + b; }
-  return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
-}
+// Others
+import { EASE_IN_OUT_EXPO } from './easing-logic';
 
 @NgModule({
   declarations: [
@@ -61,7 +50,7 @@ export function easeInOutExpo(t: number, b: number, c: number, d: number): numbe
     InViewportModule,
     ScrollSpyModule.forRoot(),
     AnimateOnScrollModule.forRoot(),
-    NgxPageScrollCoreModule.forRoot({ scrollOffset: 80, easingLogic: easeInOutExpo }),
+    NgxPageScrollCoreModule.forRoot({ scrollOffset: 80, easingLogic: EASE_IN_OUT_EXPO }),
     NgxPageScrollModule,
     NgbModule,
     BrowserModule,
