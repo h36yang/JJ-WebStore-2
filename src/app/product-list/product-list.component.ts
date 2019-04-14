@@ -11,7 +11,10 @@ import { Product } from './product';
 export class ProductListComponent implements OnInit {
 
   featuredProducts: Product[];
+  featuredLoaded: boolean = false;
+
   hotProducts: Product[];
+  hotLoaded: boolean = false;
 
   constructor(private dataService: DataService) { }
 
@@ -19,13 +22,19 @@ export class ProductListComponent implements OnInit {
     // Featured - Category ID = 1
     this.dataService.getProductsByCategory(1)
       .subscribe(
-        (data: Product[]) => this.featuredProducts = data
+        (data: Product[]) => {
+          this.featuredProducts = data;
+          this.featuredLoaded = true;
+        }
       );
 
     // Hot - Category ID = 2
     this.dataService.getProductsByCategory(2)
       .subscribe(
-        (data: Product[]) => this.hotProducts = data
+        (data: Product[]) => {
+          this.hotProducts = data;
+          this.hotLoaded = true;
+        }
       );
   }
 }
