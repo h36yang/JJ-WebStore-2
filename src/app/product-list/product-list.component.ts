@@ -11,12 +11,15 @@ import { Product } from './product';
 export class ProductListComponent implements OnInit {
 
   featuredProducts: Product[];
-  featuredLoaded: boolean = false;
+  featuredLoaded: boolean;
 
   hotProducts: Product[];
-  hotLoaded: boolean = false;
+  hotLoaded: boolean;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+    this.featuredLoaded = false;
+    this.hotLoaded = false;
+  }
 
   ngOnInit() {
     // Featured - Category ID = 1

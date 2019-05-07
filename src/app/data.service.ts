@@ -13,12 +13,14 @@ import { CONTACTS } from './contact-us/contact-data';
 })
 export class DataService {
 
-  baseApi: string = 'https://zcteaapi.azurewebsites.net/api/';
+  baseApi: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.baseApi = 'https://zcteaapi.azurewebsites.net/api/';
+  }
 
   getProductsByCategory(categoryId: number): Observable<Product[]> {
-    const url: string = `${this.baseApi}Products/ByCategory/${categoryId}`;
+    const url = `${this.baseApi}Products/ByCategory/${categoryId}`;
     const options = {
       headers: new HttpHeaders({
         'Accept': 'application/json'
@@ -45,12 +47,9 @@ export class DataService {
     } else {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
-      console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+      console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
     }
     // return an observable with a user-facing error message
-    return throwError(
-      'Something bad happened; please try again later.');
-  };
+    return throwError('Something bad happened; please try again later.');
+  }
 }
