@@ -1,5 +1,6 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,10 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { NgwWowModule } from 'ngx-wow';
 import { ParallaxModule } from 'ngx-parallax';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 // Custom Modules
 import { AppRoutingModule } from './app-routing.module';
@@ -48,15 +49,16 @@ import { EASE_IN_OUT_EXPO } from './easing-logic';
     ProductDetailComponent
   ],
   imports: [
-    InViewportModule,
-    ScrollSpyModule.forRoot(),
-    AnimateOnScrollModule.forRoot(),
-    NgxPageScrollCoreModule.forRoot({ scrollOffset: 80, easingLogic: EASE_IN_OUT_EXPO }),
-    NgxPageScrollModule,
-    NgbModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    InViewportModule,
+    ScrollSpyModule.forRoot(),
+    NgxPageScrollCoreModule.forRoot({ scrollOffset: 80, easingLogic: EASE_IN_OUT_EXPO }),
+    NgxPageScrollModule,
+    NgwWowModule,
+    NgbModule,
     FontAwesomeModule,
     ParallaxModule
   ],

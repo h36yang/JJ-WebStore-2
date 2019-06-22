@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../node_modules/wowjs/dist/wow.min.js"
+              "node_modules/wowjs/dist/wow.js"
             ]
           },
           "configurations": {
