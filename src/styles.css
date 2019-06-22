@@ -1,4 +1,5 @@
-@import '~animate.css/animate.min.css';
+@import '~animate.css/animate.css';
+
 body {
     background-color: lightgray !important;
 }
@@ -23,11 +24,7 @@ body {
     }
 }
 
-.animated {
-    visibility: visible !important;
-}
-
-.hide-on-init {
+.wow {
     visibility: hidden;
 }
 
