@@ -4770,7 +4770,7 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.1.tgz#acb909e327b1e87ec9ef15f41b8a269512ad41ee"
   integrity sha512-3KL3fvuRkZ7s4IFOMfztb7zJp3QaVWnBeGoJlgB38XnCRPj/0tLzzLG5IB8NYOHbJ8g8UGrgZv44GLDk6CxTxA==
 
-ngx-page-scroll-core@6.0.2:
+ngx-page-scroll-core@~6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/ngx-page-scroll-core/-/ngx-page-scroll-core-6.0.2.tgz#8c9c0a1663fd1ec915168d53138a552dc21a34a3"
   integrity sha512-/kke5pvoxZJzfQikhfd5kv8YxcYoqpOhOjMi4SME1VjO2lQg/48942YmouJhm1B2UT8UMtytDRHeh+p8hnydhA==

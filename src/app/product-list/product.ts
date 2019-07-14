@@ -5,7 +5,7 @@ export class Product {
     longName: string;
     productNumber: string;
     ingredient: string;
-    avatarImageId?: number;
+    avatarId?: number;
     productImageIds?: number[];
     type: string;
     price: number;
@@ -14,7 +14,7 @@ export class Product {
     producer: string;
     highlight: string;
     description: string;
-    productFunction: ProductFunction[];
+    functions: ProductFunction[];
 }
 
 export class ProductFunction {
