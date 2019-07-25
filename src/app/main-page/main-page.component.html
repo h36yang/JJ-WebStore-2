@@ -4,14 +4,15 @@
 
 <div class="container-fluid" (window:resize)="adjustHeight()">
   <sn-scroll-spy-section id="top" class="row" for="nav-list">
-    <div parallax [config]="parallaxConfig" class="fill-screen bg-img-1 text-center text-justify" [ngStyle]="customStyle">
+    <div parallax [config]="parallaxConfig" class="fill-screen bg-img-1 text-center text-justify"
+      [ngStyle]="customStyle">
       <div class="welcome-title pl-3 pr-3">
         <h2>从来佳茗似佳人</h2>
         <h3>Good tea is like an elegant lady</h3>
       </div>
 
       <div class="down-button">
-        <a pageScroll class="btn" href="#products">
+        <a pageScroll class="btn" href="#products" aria-label="Go to the next section">
           <fa-icon [icon]="faArrowCircleDown" size="4x"></fa-icon>
         </a>
       </div>
