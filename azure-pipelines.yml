@@ -16,12 +16,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install -g @angular/cli
-    npm install
-    ng config -g cli.warnings.versionMismatch false
+    yarn global add @angular/cli
+    yarn install
     ng lint
     ng build --prod
-  displayName: 'npm install and build'
+  displayName: 'yarn install and ng build'
 
 - task: AzureRmWebAppDeployment@4
   inputs:
