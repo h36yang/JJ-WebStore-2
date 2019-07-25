@@ -16,10 +16,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    yarn global add @angular/cli
     yarn install
-    ng lint
-    ng build --prod
+    $(System.DefaultWorkingDirectory)/node_modules/.bin/ng lint
+    $(System.DefaultWorkingDirectory)/node_modules/.bin/ng build --prod
   displayName: 'yarn install and ng build'
 
 - task: AzureRmWebAppDeployment@4
