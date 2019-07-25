@@ -1,23 +1,24 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" [ngClass]="{ 'navbar-shrink': isNavbarShrinked }" (window:scroll)="onPageScroll()">
+<nav role="navigation" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
+  [ngClass]="{ 'navbar-shrink': isNavbarShrinked }" (window:scroll)="onPageScroll()">
   <a pageScroll class="navbar-brand" href="#top">
     <img class="navbar-logo" [src]="logoUrl" />
   </a>
 
-  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false"
-    aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul snScrollSpy id="nav-list" class="nav navbar-nav nav-pills">
-        <li class="nav-item">
-            <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#top">
-              <span>主页&nbsp;</span>
-              <span>
-                <em>Home</em>
-              </span>
-            </a>
-          </li>
+      <li class="nav-item">
+        <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#top">
+          <span>主页&nbsp;</span>
+          <span>
+            <em>Home</em>
+          </span>
+        </a>
+      </li>
       <li class="nav-item">
         <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#products">
           <span>产品&nbsp;</span>

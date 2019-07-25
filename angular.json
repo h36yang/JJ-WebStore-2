@@ -24,6 +24,7 @@
               "src/sitemap.xml"
             ],
             "styles": [
+              "node_modules/animate.css/animate.css",
               "src/bootstrap-custom.scss",
               "src/styles.css"
             ],
