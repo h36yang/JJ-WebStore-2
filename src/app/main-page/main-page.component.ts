@@ -19,7 +19,7 @@ export class MainPageComponent implements OnInit {
     this.faArrowCircleDown = faArrowCircleDown;
     // Initalize background image height to be window height
     this.customStyle = {
-      'height': window.innerHeight + 'px'
+      height: window.innerHeight + 'px'
     };
   }
 
@@ -27,7 +27,7 @@ export class MainPageComponent implements OnInit {
     // Only adjust background image height dynamically when viewport is smaller than 1024px
     if (window.innerWidth > 1024) {
       this.customStyle = {
-        'height': window.innerHeight + 'px'
+        height: window.innerHeight + 'px'
       };
     }
   }
