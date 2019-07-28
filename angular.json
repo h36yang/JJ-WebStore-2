@@ -21,10 +21,14 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              {
+                "glob": "animate.min.css",
+                "input": "node_modules/animate.css/",
+                "output": "/"
+              }
             ],
             "styles": [
-              "node_modules/animate.css/animate.css",
               "src/bootstrap-custom.scss",
               "src/styles.css"
             ],

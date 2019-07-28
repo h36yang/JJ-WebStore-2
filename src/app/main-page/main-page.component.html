@@ -2,7 +2,7 @@
   <app-header></app-header>
 </header>
 
-<div class="container-fluid" (window:resize)="adjustHeight()">
+<article class="container-fluid" (window:resize)="adjustHeight()">
   <sn-scroll-spy-section id="top" class="row" for="nav-list">
     <div parallax [config]="parallaxConfig" class="fill-screen bg-img-1 text-center text-justify"
       [ngStyle]="customStyle">
@@ -46,4 +46,4 @@
   <sn-scroll-spy-section id="contactUs" class="row content-filler" for="nav-list">
     <app-contact-us></app-contact-us>
   </sn-scroll-spy-section>
-</div>
+</article>
