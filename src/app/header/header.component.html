@@ -9,7 +9,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-end" id="navbarNav">
+  <aside id="navbarNav" [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-end">
     <ul snScrollSpy id="nav-list" class="nav navbar-nav nav-pills">
       <li class="nav-item">
         <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#top">
@@ -19,6 +19,7 @@
           </span>
         </a>
       </li>
+
       <li class="nav-item">
         <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#products">
           <span>产品&nbsp;</span>
@@ -27,6 +28,7 @@
           </span>
         </a>
       </li>
+
       <li class="nav-item">
         <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#aboutPuErh">
           <span>关于普洱&nbsp;</span>
@@ -35,6 +37,7 @@
           </span>
         </a>
       </li>
+
       <li class="nav-item">
         <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#aboutUs">
           <span>关于我们&nbsp;</span>
@@ -43,6 +46,7 @@
           </span>
         </a>
       </li>
+
       <li class="nav-item">
         <a pageScroll snScrollSpyItem for="nav-list" class="nav-link" href="#contactUs">
           <span>联系我们&nbsp;</span>
@@ -52,5 +56,5 @@
         </a>
       </li>
     </ul>
-  </div>
+  </aside>
 </nav>

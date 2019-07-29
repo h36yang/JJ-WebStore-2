@@ -11,22 +11,19 @@ import { Product } from './product';
 export class ProductListComponent implements OnInit {
 
   featuredProducts: Product[];
-  featuredLoaded: boolean;
-
   hotProducts: Product[];
-  hotLoaded: boolean;
 
-  constructor(private dataService: DataService) {
-    this.featuredLoaded = false;
-    this.hotLoaded = false;
-  }
+  featuredLoaded = false;
+  hotLoaded = false;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     // Featured - Category ID = 1
     this.dataService.getProductsByCategory(1)
       .subscribe(
-        (data: Product[]) => {
-          this.featuredProducts = data;
+        (data1: Product[]) => {
+          this.featuredProducts = data1;
           this.featuredLoaded = true;
         }
       );
@@ -34,8 +31,8 @@ export class ProductListComponent implements OnInit {
     // Hot - Category ID = 2
     this.dataService.getProductsByCategory(2)
       .subscribe(
-        (data: Product[]) => {
-          this.hotProducts = data;
+        (data2: Product[]) => {
+          this.hotProducts = data2;
           this.hotLoaded = true;
         }
       );

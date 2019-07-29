@@ -1,10 +1,15 @@
-<div class="container-fluid">
+<article class="container-fluid">
   <section class="card text-center">
     <h4 class="card-header">特别推荐 FEATURED</h4>
     <div class="card-body">
-      <div *ngIf="featuredLoaded; else loadingBlock" class="row">
-        <div class="col-lg-6 col-12" *ngFor="let featured of featuredProducts">
+      <div class="row">
+        <div [hidden]="!featuredLoaded" class="col-lg-6 col-12" *ngFor="let featured of featuredProducts">
           <app-product-card [product]="featured"></app-product-card>
+        </div>
+        <div [hidden]="featuredLoaded" class="col-12 justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
     </div>
@@ -13,19 +18,16 @@
   <section class="card text-center">
     <h4 class="card-header">热卖商品 HOT</h4>
     <div class="card-body">
-      <div *ngIf="hotLoaded; else loadingBlock" class="row">
-        <div class="col-lg-6 col-12" *ngFor="let hot of hotProducts">
+      <div class="row">
+        <div [hidden]="!hotLoaded" class="col-lg-6 col-12" *ngFor="let hot of hotProducts">
           <app-product-card [product]="hot"></app-product-card>
+        </div>
+        <div [hidden]="hotLoaded" class="col-12 justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <ng-template #loadingBlock>
-    <div class="col-12 justify-content-center">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
-  </ng-template>
-</div>
+</article>

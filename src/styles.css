@@ -28,7 +28,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
     .wow {
-        visibility: visible;
+        visibility: visible !important;
     }
 }
 
