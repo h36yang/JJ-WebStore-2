@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
   constructor(private wowService: NgwWowService) { }
 
   ngOnInit() {
-    this.wowService.init();
+    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      // Enable wowjs if motion is not reduced
+      this.wowService.init();
+    }
   }
 }

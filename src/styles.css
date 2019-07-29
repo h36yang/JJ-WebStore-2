@@ -23,12 +23,12 @@ body {
 }
 
 .wow {
-    visibility: hidden;
+    visibility: visible;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
     .wow {
-        visibility: visible !important;
+        visibility: hidden;
     }
 }
 
