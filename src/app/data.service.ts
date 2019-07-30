@@ -23,7 +23,8 @@ export class DataService {
     const url = `${this.baseApi}Products/ByCategory/${categoryId}`;
     const options = {
       headers: new HttpHeaders({
-        Accept: 'application/json'
+        Accept: 'application/json',
+        'Accept-Encoding': 'br, gzip'
       })
     };
     return this.http.get<Product[]>(url, options)
