@@ -14,18 +14,20 @@ import { CONTACTS } from './contact-us/contact-data';
 export class DataService {
 
   baseApi: string;
+  commonHeaders: HttpHeaders;
 
   constructor(private http: HttpClient) {
     this.baseApi = 'https://zcteaapi.azurewebsites.net/api/';
+    this.commonHeaders = new HttpHeaders({
+      Accept: 'application/json',
+      'Accept-Encoding': 'br, gzip'
+    });
   }
 
   getProductsByCategory(categoryId: number): Observable<Product[]> {
     const url = `${this.baseApi}Products/ByCategory/${categoryId}`;
     const options = {
-      headers: new HttpHeaders({
-        Accept: 'application/json',
-        'Accept-Encoding': 'br, gzip'
-      })
+      headers: this.commonHeaders
     };
     return this.http.get<Product[]>(url, options)
       .pipe(
