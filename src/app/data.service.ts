@@ -19,8 +19,7 @@ export class DataService {
   constructor(private http: HttpClient) {
     this.baseApi = 'https://zcteaapi.azurewebsites.net/api/';
     this.commonHeaders = new HttpHeaders({
-      Accept: 'application/json',
-      'Accept-Encoding': 'br, gzip'
+      Accept: 'application/json'
     });
   }
 
