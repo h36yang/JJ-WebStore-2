@@ -21,12 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/sitemap.xml",
-              {
-                "glob": "animate.min.css",
-                "input": "node_modules/animate.css/",
-                "output": "/"
-              }
+              "src/sitemap.xml"
             ],
             "styles": [
               "src/bootstrap-custom.scss",
