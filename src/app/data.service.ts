@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
+import { environment } from '../environments/environment';
 import { Product, ProductFunction } from './product-list/product';
 import { PUERH_FUNCTIONS } from './product-list/product-data';
 import { Contact } from './contact-us/contact';
@@ -17,7 +18,7 @@ export class DataService {
   commonHeaders: HttpHeaders;
 
   constructor(private http: HttpClient) {
-    this.baseApi = 'https://zcteaapi.azurewebsites.net/api/';
+    this.baseApi = environment.baseApi;
     this.commonHeaders = new HttpHeaders({
       Accept: 'application/json'
     });

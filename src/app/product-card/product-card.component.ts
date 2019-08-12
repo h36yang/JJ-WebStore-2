@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { environment } from '../../environments/environment';
 import { Product } from '../product-list/product';
 
 @Component({
@@ -11,5 +12,14 @@ export class ProductCardComponent implements OnInit {
 
   @Input() product: Product;
 
-  ngOnInit() { }
+  baseApi: string;
+  imageApi: string;
+
+  constructor() {
+    this.baseApi = environment.baseApi;
+  }
+
+  ngOnInit() {
+    this.imageApi = `${this.baseApi}Images/${this.product.avatarId}`;
+  }
 }
