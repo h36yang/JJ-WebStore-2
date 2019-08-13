@@ -1,12 +1,12 @@
 export class Product {
 
-    id: string;
+    id: number;
     name: string;
     longName: string;
     productNumber: string;
     ingredient: string;
     avatarId?: number;
-    productImageIds?: number[];
+    productImages?: ProductImage[];
     type: string;
     price: number;
     volume: string;
@@ -15,6 +15,12 @@ export class Product {
     highlight: string;
     description: string;
     functions: ProductFunction[];
+}
+
+export class ProductImage {
+
+    id: number;
+    name: string;
 }
 
 export class ProductFunction {
