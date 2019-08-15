@@ -1,3 +1,16 @@
-<p>
-  product-detail works!
-</p>
+<ngb-carousel *ngIf="imageIds.length > 0" [showNavigationArrows]="imageIds.length > 1"
+  [showNavigationIndicators]="imageIds.length > 1">
+  <ng-template ngbSlide *ngFor="let imageId of imageIds">
+    <div class="picsum-img-wrapper">
+      <img src="{{ baseApi }}Images/{{ imageId }}" alt="Picture {{ imageId }}">
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<ul class="list-group list-group-flush" *ngIf="product">
+  <li class="list-group-item"><strong>Name</strong>: {{ product.name }}</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>

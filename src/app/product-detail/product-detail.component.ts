@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+import { environment } from '../../environments/environment';
+import { DataService } from '../data.service';
+import { Product } from '../product-list/product';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor() { }
+  baseApi: string;
+  selectedId: number;
+  product: Product;
+  imageIds: number[] = [];
 
-  ngOnInit() {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private dataService: DataService) {
+    this.baseApi = environment.baseApi;
   }
 
+  ngOnInit() {
+    this.selectedId = +this.route.snapshot.paramMap.get('id');
+    this.dataService.getProductById(this.selectedId).subscribe(
+      (data: Product) => {
+        this.product = data;
+        this.imageIds = this.imageIds.concat(this.product.avatarId, this.product.productImages.map(x => x.id));
+      }
+    );
+  }
 }

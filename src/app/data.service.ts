@@ -35,6 +35,17 @@ export class DataService {
       );
   }
 
+  getProductById(id: number): Observable<Product> {
+    const url = `${this.baseApi}Products/${id}`;
+    const options = {
+      headers: this.commonHeaders
+    };
+    return this.http.get<Product>(url, options)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
   getPuErhFunctions(): ProductFunction[] {
     return PUERH_FUNCTIONS;
   }
