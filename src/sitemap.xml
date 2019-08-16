@@ -18,4 +18,22 @@
     <url>
         <loc>https://zctea.azurewebsites.net/#contactUs</loc>
     </url>
+    <url>
+        <loc>https://zctea.azurewebsites.net/product/1</loc>
+    </url>
+    <url>
+        <loc>https://zctea.azurewebsites.net/product/2</loc>
+    </url>
+    <url>
+        <loc>https://zctea.azurewebsites.net/product/3</loc>
+    </url>
+    <url>
+        <loc>https://zctea.azurewebsites.net/product/4</loc>
+    </url>
+    <url>
+        <loc>https://zctea.azurewebsites.net/product/5</loc>
+    </url>
+    <url>
+        <loc>https://zctea.azurewebsites.net/product/6</loc>
+    </url>
 </urlset>
