@@ -1,4 +1,5 @@
-<div class="card wow bounceInLeft" data-wow-offset="120">
+<a class="card wow bounceInLeft" data-wow-offset="120" [routerLink]="['/product', product.id]" target="_blank"
+  rel="noopener">
   <figure class="product-avatar">
     <img class="card-img-top shadow-lg rounded" [src]="imageApi" [alt]="product.name">
   </figure>
@@ -7,4 +8,4 @@
     <h5 class="card-subtitle">{{ product.type }}</h5>
     <p class="card-text">{{ product.price | currency }}</p>
   </div>
-</div>
+</a>

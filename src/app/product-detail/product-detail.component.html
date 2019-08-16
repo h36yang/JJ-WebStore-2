@@ -1,16 +1,63 @@
-<ngb-carousel *ngIf="imageIds.length > 0" [showNavigationArrows]="imageIds.length > 1"
-  [showNavigationIndicators]="imageIds.length > 1">
-  <ng-template ngbSlide *ngFor="let imageId of imageIds">
-    <div class="picsum-img-wrapper">
-      <img src="{{ baseApi }}Images/{{ imageId }}" alt="Picture {{ imageId }}">
-    </div>
-  </ng-template>
-</ngb-carousel>
+<section class="container-fluid">
+  <h1 class="m-2">
+    <span class="badge badge-primary fill-width">
+      <span class="d-sm-block d-none m-4">产品信息 Product Information</span>
+      <span class="d-sm-none d-block m-4">产品信息<br />Product Info</span>
+    </span>
+  </h1>
 
-<ul class="list-group list-group-flush" *ngIf="product">
-  <li class="list-group-item"><strong>Name</strong>: {{ product.name }}</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
+  <div class="row">
+    <aside class="col-md-6 col-12">
+      <ngb-carousel class="m-2" *ngIf="imageIds.length > 0">
+        <ng-template ngbSlide *ngFor="let imageId of imageIds">
+          <img class="carousel-image shadow-lg rounded center" src="{{ baseApi }}Images/{{ imageId }}"
+            alt="Picture {{ imageId }}">
+        </ng-template>
+      </ngb-carousel>
+    </aside>
+
+    <aside class="col-md-6 col-12">
+      <div class="card m-2" *ngIf="product">
+        <div class="card-body">
+          <h4 class="card-title m-4">{{ product.name }}</h4>
+          <h5 class="card-subtitle m-4 text-muted">{{ product.type }}</h5>
+          <p class="card-text m-4" *ngIf="product.highlight"> {{ product.highlight }} </p>
+          <p class="card-text m-4">{{ product.volume }}</p>
+          <p class="card-text m-4">{{ product.price | currency }}</p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="col-12">
+      <div class="card m-2" *ngIf="product">
+        <div class="card-header">More Details</div>
+
+        <div class="card-body" *ngIf="product.description">{{ product.description }}</div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngIf="product.productNumber">
+            <strong>产品货号 (Product Number)</strong>: {{ product.productNumber }}
+          </li>
+          <li class="list-group-item" *ngIf="product.ingredient">
+            <strong>配料 (Ingredients)</strong>: {{ product.ingredient }}
+          </li>
+          <li class="list-group-item" *ngIf="product.origin">
+            <strong>产地 (Origin)</strong>: {{ product.origin }}
+          </li>
+          <li class="list-group-item" *ngIf="product.producer">
+            <strong>出品商 (Producer)</strong>: {{ product.producer }}
+          </li>
+        </ul>
+
+        <div class="card-body" *ngIf="product.functions && product.functions.length > 0">
+          <strong class="card-title">产品功效 (Product Functions)</strong>
+          <ul class="pt-3">
+            <li class="p-2" *ngFor="let func of product.functions">
+              <u>{{ func.summary }}</u> - {{ func.detail }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

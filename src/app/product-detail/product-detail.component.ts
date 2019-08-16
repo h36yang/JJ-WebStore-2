@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { environment } from '../../environments/environment';
 import { DataService } from '../data.service';
@@ -19,7 +19,6 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private dataService: DataService) {
     this.baseApi = environment.baseApi;
   }
