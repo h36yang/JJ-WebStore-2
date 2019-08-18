@@ -20,7 +20,8 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     // Featured - Category ID = 1
-    this.dataService.getProductsByCategory(1)
+    const featuredCatgeoryId = 1;
+    this.dataService.getProductsByCategory(featuredCatgeoryId)
       .subscribe(
         (data1: Product[]) => {
           this.featuredProducts = data1;
@@ -29,7 +30,8 @@ export class ProductListComponent implements OnInit {
       );
 
     // Hot - Category ID = 2
-    this.dataService.getProductsByCategory(2)
+    const hotCategoryId = 2;
+    this.dataService.getProductsByCategory(hotCategoryId)
       .subscribe(
         (data2: Product[]) => {
           this.hotProducts = data2;

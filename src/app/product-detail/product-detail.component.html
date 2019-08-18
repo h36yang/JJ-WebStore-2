@@ -1,23 +1,23 @@
 <section class="container-fluid">
   <h1 class="m-2">
     <span class="badge badge-primary fill-width">
-      <span class="d-sm-block d-none m-4">产品信息 Product Information</span>
-      <span class="d-sm-none d-block m-4">产品信息<br />Product Info</span>
+      <span #headingRegular class="d-sm-block d-none m-4">产品信息 Product Information</span>
+      <span #headingMobile class="d-sm-none d-block m-4">产品信息<br />Product Info</span>
     </span>
   </h1>
 
-  <div class="row">
+  <div class="row" *ngIf="product; else loadingBlock">
     <aside class="col-md-6 col-12">
       <ngb-carousel class="m-2" *ngIf="imageIds.length > 0">
         <ng-template ngbSlide *ngFor="let imageId of imageIds">
           <img class="carousel-image shadow-lg rounded center" src="{{ baseApi }}Images/{{ imageId }}"
-            alt="Picture {{ imageId }}">
+            alt="Picture {{ imageId }}" />
         </ng-template>
       </ngb-carousel>
     </aside>
 
     <aside class="col-md-6 col-12">
-      <div class="card m-2" *ngIf="product">
+      <div class="card m-2">
         <div class="card-body">
           <h4 class="card-title m-4">{{ product.name }}</h4>
           <h5 class="card-subtitle m-4 text-muted">{{ product.type }}</h5>
@@ -29,10 +29,12 @@
     </aside>
 
     <section class="col-12">
-      <div class="card m-2" *ngIf="product">
+      <div class="card m-2">
         <div class="card-header">More Details</div>
 
-        <div class="card-body" *ngIf="product.description">{{ product.description }}</div>
+        <div class="card-body" *ngIf="product.description">
+          {{ product.description }}
+        </div>
 
         <ul class="list-group list-group-flush">
           <li class="list-group-item" *ngIf="product.productNumber">
@@ -60,4 +62,12 @@
       </div>
     </section>
   </div>
+
+  <ng-template #loadingBlock>
+    <div class="p-3">
+      <div class="spinner-border center" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </ng-template>
 </section>
