@@ -28,8 +28,21 @@ export class ProductDetailComponent implements OnInit {
     this.dataService.getProductById(this.selectedId).subscribe(
       (data: Product) => {
         this.product = data;
-        this.imageIds = this.imageIds.concat(this.product.avatarId, this.product.productImages.map(x => x.id));
+        this.imageIds = this.mergeArrays(
+          this.imageIds,
+          this.product.avatarId,
+          this.product.productImages.map(x => x.id)
+        );
       }
     );
+  }
+
+  private mergeArrays(...arrays: any[]) {
+    let jointArray = [];
+    arrays.forEach(array => {
+      jointArray = jointArray.concat(array);
+    });
+    const uniqueSet = new Set([...jointArray]);
+    return Array.from(uniqueSet);
   }
 }
