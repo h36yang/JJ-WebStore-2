@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { faArrowLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
 import { environment } from '../../environments/environment';
 import { DataService } from '../data.service';
 import { Product } from '../product-list/product';
@@ -16,6 +18,7 @@ export class ProductDetailComponent implements OnInit {
   selectedId: number;
   product: Product;
   imageIds: number[] = [];
+  faArrowLeft: IconDefinition;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +27,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.faArrowLeft = faArrowLeft;
     this.selectedId = +this.route.snapshot.paramMap.get('id');
     this.dataService.getProductById(this.selectedId).subscribe(
       (data: Product) => {

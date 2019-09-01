@@ -1,14 +1,18 @@
 <section class="container-fluid">
   <h1 class="m-2">
-    <span class="badge badge-primary fill-width">
-      <span #headingRegular class="d-sm-block d-none m-4">产品信息 Product Information</span>
-      <span #headingMobile class="d-sm-none d-block m-4">产品信息<br />Product Info</span>
+    <span class="badge badge-primary fill-width d-flex align-items-center">
+      <a class="btn back-button" [routerLink]="['/']" aria-label="Go back to home page">
+        <fa-icon [icon]="faArrowLeft" size="2x"></fa-icon>
+      </a>
+      <span #headingRegular class="d-sm-block d-none header">产品信息 Product Information</span>
+      <span #headingMobile class="d-sm-none d-block header">产品信息<br />Product Info</span>
     </span>
   </h1>
 
   <div class="row" *ngIf="product; else loadingBlock">
     <aside class="col-md-6 col-12">
-      <ngb-carousel class="m-2" *ngIf="imageIds.length > 0">
+      <ngb-carousel [showNavigationArrows]="imageIds.length > 1" [showNavigationIndicators]="imageIds.length > 1"
+        class="m-2" *ngIf="imageIds.length > 0">
         <ng-template ngbSlide *ngFor="let imageId of imageIds">
           <img class="carousel-image shadow-lg rounded center" src="{{ baseApi }}Images/{{ imageId }}"
             alt="Picture {{ imageId }}" />

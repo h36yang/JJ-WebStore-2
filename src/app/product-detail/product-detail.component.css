@@ -9,3 +9,11 @@
         max-height: 500px;
     }
 }
+
+.header {
+    margin: 25px auto;
+}
+
+.back-button fa-icon {
+    color: white;
+}
