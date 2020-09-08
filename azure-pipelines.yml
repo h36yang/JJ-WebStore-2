@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '12.x'
   displayName: 'Install Node.js'
 
 - script: |
@@ -20,11 +20,3 @@ steps:
     $(System.DefaultWorkingDirectory)/node_modules/.bin/ng lint
     $(System.DefaultWorkingDirectory)/node_modules/.bin/ng build --prod
   displayName: 'yarn install and ng build'
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Pay-As-You-Go (968079ef-ecea-4381-940d-843a706c9d20)'
-    appType: 'webApp'
-    WebAppName: 'zcTea'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/dist'
